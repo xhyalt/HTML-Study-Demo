@@ -41,67 +41,98 @@ body {
 }
 
 #container {
-  width: 1080px;
-  height: 540px;
-  background-color: #fff;
-  position: fixed;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+    width: 1080px;
+    height: 540px;
+    background-color: #fff;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
-#headPic{
-  width: 540px;
-  height: 180px;
-  background-color: #787878;
-  float: left;
+#headPic {
+    width: 540px;
+    height: 180px;
+    background-color: #787878;
+    float: left;
+    position: relative;
 }
 
-#darkGreen{
-  width: 180px;
-  height: 180px;
-  background-color: #1abc9c;
-  float: left;
-  margin:0 auto;
-  display:table;
+#headPic img{
+    position: absolute;
+    top: 25px;
+    left: -10px;
 }
 
-#lightGrey{
-  width: 180px;
-  height: 180px;
-  background-color: #8e8e8e;
-  float: left;
+#darkGreen {
+    width: 180px;
+    height: 180px;
+    background-color: #1abc9c;
+    float: left;
+    margin: 0 auto;
+    display: table;
 }
 
-#darkGrey{
-  width: 180px;
-  height: 180px;
-  background-color: #787878;
-  float: left;
+#lightGrey {
+    width: 180px;
+    height: 180px;
+    background-color: #8e8e8e;
+    float: left;
 }
 
-#lightGreen{
-  width: 180px;
-  height: 180px;
-  background-color: #1ccba8;
-  float: left;
-  margin:0 auto;
-  display:table;
+#darkGrey {
+    width: 180px;
+    height: 180px;
+    background-color: #787878;
+    float: left;
 }
 
-.blockW{
-  text-align:center;
-  display:table-cell;
-  vertical-align:middle;
+#lightGreen {
+    width: 180px;
+    height: 180px;
+    background-color: #1ccba8;
+    float: left;
+    margin: 0 auto;
+    display: table;
 }
 
-.blockW img{
-
+.block {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.blockW h1{
-  color: #fff;
-  font-weight:bold;
+.block h1 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 45%;
+}
+
+.copy_right {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.8em;
+    padding: 5em 0px 0px 0px;
+    font-family: 'open_sansregular';
+    text-align: center;
+}
+
+.copy_right a {
+    color: #FF7ED5;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.copy_right a:hover {
+    color: #fff;
 }

@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -32,3 +32,85 @@ table {
 }
 
 /* start editing from here */
+
+body {
+    margin: 0;
+    font-family: 微软雅黑;
+    background-color: #f3f3f3;
+}
+
+.left {
+    width: 150px;
+    height: 90%;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    /*text-align: left;*/
+    margin: 0 auto;
+}
+
+.div1 {
+    /*text-align: left;*/
+    left: 50px;
+    width: 150px;
+    padding-top: 0px;
+    background-color: #fff;
+    /*padding-top: 10px;*/
+}
+
+.div2 {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: #ccc 1px dotted;
+}
+
+.div2 p {
+    text-indent: 40px;
+    font-size: 16px;
+    color: #777777;
+}
+
+.imgTitleBox {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 110px;
+    top: 12px;
+    background-image: url(../images/list_01_plus_on.png);
+    background-repeat: no-repeat;
+}
+
+.div3 {
+    display: none;
+    font-size: 13px;
+}
+
+.div3 ul {
+    margin: 0;
+    padding: 0;
+}
+
+.div3 li {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    border-bottom: #ccc 1px dotted;
+    text-align: left;
+}
+
+.div3 p {
+    text-indent: 60px;
+    font-size: 14px;
+    color: #777777;
+}
+
+.imgSubjectBox {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 35px;
+    top: 5px;
+    background-repeat: no-repeat;
+}

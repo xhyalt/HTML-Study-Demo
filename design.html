@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/design.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/jquery.min.js"></script>
+    <title>问卷设计</title>
+</head>
+
+<body>
+    <!-- 代码部分begin -->
+    <div class="left">
+        <div class="div1">
+            <div id="cytx" class="div2">
+                <div class="imgTitleBox"></div>
+                <p>常用题型</p>
+            </div>
+            <div class="div3">
+                <ul>
+                    <li>
+                        <div class="imgSubjectBox">
+                            <img src="./images/button_01_radio_off.png" alt="" />
+                        </div>
+                        <p>单选题</p>
+                    </li>
+                    <li>
+                        <div class="imgSubjectBox">
+                            <img src="./images/button_02_multiple_off.png" alt="" />
+                        </div>
+                        <p>多选题</p>
+                    </li>
+                    <li>
+                        <div class="imgSubjectBox">
+                            <img src="./images/button_04_completion_off.png" alt="" />
+                        </div>
+                        <p>填空题</p>
+                    </li>
+                    <li>
+                        <div class="imgSubjectBox">
+                            <img src="./images/button_05_multiterm_completion_off.png" alt="" />
+                        </div>
+                        <p>多项选择题</p>
+                    </li>
+                    <li>
+                        <div class="imgSubjectBox">
+                            <img src="./images/button_05_multiterm_completion_off.png" alt="" />
+                        </div>
+                        <p>简答题</p>
+                    </li>
+                    <li>
+                        <div class="imgSubjectBox">
+                            <img src="./images/button_05_multiterm_completion_off.png" alt="" />
+                        </div>
+                        <p>分割线</p>
+                    </li>
+                    <li>
+                        <div class="imgSubjectBox">
+                            <img src="./images/button_15_page_off.png" alt="" />
+                        </div>
+                        <p>分页</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="gdtx" class="div2">
+                <div class="imgTitleBox"></div>
+                <p>更多题型</p>
+            </div>
+            <div class="div3">
+                <ul>
+                    <li>
+                        <p>某题型</p>
+                    </li>
+                    <li>
+                        <p>某题型</p>
+                    </li>
+                    <li>
+                        <p>某题型</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="zb" class="div2">
+                <div class="imgTitleBox"></div>
+                <p>指标</p>
+            </div>
+            <div class="div3">
+                <ul>
+                    <li>
+                        <p>指标映射</p>
+                    </li>
+                    <li>
+                        <p>公式映射</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 菜单切换滑动效果 -->
+    <script>
+        var img_cytx = 0; /*关闭*/
+        var img_gdtx = 0; /*关闭*/
+        var img_zb = 0; /*关闭*/
+        $(function() {
+            $(".div2").click(function() {
+                var x = document.getElementsByClassName("imgTitleBox");
+
+                if ($(this).attr('id') == "cytx") {
+                    if (img_cytx == 0) {
+                        x[0].style.backgroundImage = "url(./images/list_02_minus_on.png)";
+                        x[1].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        x[2].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        img_cytx = 1;
+                        img_gdtx = 0;
+                        img_zb = 0;
+                    } else {
+                        x[0].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        img_cytx = 0;
+                    }
+                }
+                if ($(this).attr('id') == "gdtx") {
+                    if (img_gdtx == 0) {
+                        x[0].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        x[1].style.backgroundImage = "url(./images/list_02_minus_on.png)";
+                        x[2].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        img_cytx = 0;
+                        img_gdtx = 1;
+                        img_zb = 0;
+                    } else {
+                        x[1].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        img_gdtx = 0;
+                    }
+                }
+                if ($(this).attr('id') == "zb") {
+                    if (img_zb == 0) {
+                        x[0].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        x[1].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        x[2].style.backgroundImage = "url(./images/list_02_minus_on.png)";
+                        img_cytx = 0;
+                        img_gdtx = 0;
+                        img_zb = 1;
+                    } else {
+                        x[2].style.backgroundImage = "url(./images/list_01_plus_on.png)";
+                        img_zb = 0;
+                    }
+                }
+                $(this).next("div").slideToggle("slow").siblings(".div3:visible").slideUp("slow");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+

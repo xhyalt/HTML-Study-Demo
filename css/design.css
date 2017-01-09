@@ -1,4 +1,4 @@
-    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -31,6 +31,7 @@ table {
     border-spacing: 0;
 }
 
+
 /* start editing from here */
 
 body {
@@ -39,33 +40,43 @@ body {
     background-color: #f3f3f3;
 }
 
-.left {
-    width: 150px;
-    height: 90%;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    /*text-align: left;*/
-    margin: 0 auto;
+
+/*问卷设计左侧菜单部分*/
+
+#parent {
+    width: 1200px;
+    height: 100%;
+    /*background-color: #fff;*/
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
-.div1 {
-    /*text-align: left;*/
+#left {
+    width: 150px;
+    /*border: 1px solid #ccc;*/
+    font-size: 14px;
+    margin: 10px;
+    float: left;
+}
+
+.menuBox {
     left: 50px;
     width: 150px;
     padding-top: 0px;
     background-color: #fff;
-    /*padding-top: 10px;*/
 }
 
-.div2 {
+.menuTitleBox {
     height: 40px;
     line-height: 40px;
     cursor: pointer;
     position: relative;
-    border-bottom: #ccc 1px dotted;
+    border-bottom: #f3f3f3 1px solid;
 }
 
-.div2 p {
+.menuTitleBox p {
     text-indent: 40px;
     font-size: 16px;
     color: #777777;
@@ -81,26 +92,26 @@ body {
     background-repeat: no-repeat;
 }
 
-.div3 {
+.menuItemBox {
     display: none;
     font-size: 13px;
 }
 
-.div3 ul {
+.menuItemBox ul {
     margin: 0;
     padding: 0;
 }
 
-.div3 li {
+.menuItemBox li {
     position: relative;
     height: 40px;
     line-height: 40px;
     list-style: none;
-    border-bottom: #ccc 1px dotted;
+    border-bottom: #f3f3f3 1px solid;
     text-align: left;
 }
 
-.div3 p {
+.menuItemBox p {
     text-indent: 60px;
     font-size: 14px;
     color: #777777;
@@ -113,4 +124,155 @@ body {
     left: 35px;
     top: 5px;
     background-repeat: no-repeat;
+}
+
+
+/*问卷设计主要部分*/
+/*主要部分的头部分*/
+#middle {
+    width: 800px;
+    height: auto;
+    /*background-color: #fff;*/
+    margin: 10px auto;
+    float: left;
+}
+
+#titleBox {
+    width: 100%;
+    height: 108px;
+    background-color: #fff;
+}
+
+#titleName {
+    /*background-color: #fff;*/
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    color: #666666;
+    border-bottom: #f3f3f3 1px solid;
+}
+
+.Blank {
+    width: 50px;
+    float: left;
+}
+
+#titleInfo {
+    border-left: #f3f3f3 1px solid;
+    width: auto;
+    float: left;
+    padding: 15px;
+    color: #666666;
+    /*background-color: #fff;*/
+
+}
+
+table, td {
+    border: 1px solid black;
+}
+
+/*主要部分的尾部分*/
+
+#tailBox {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+#tailUp {
+    font-size: 18px;
+    color: #666666;
+    border-bottom: #f3f3f3 1px solid;
+}
+
+#tailPage{
+  width: 700px;
+  border-left: #f3f3f3 1px solid;
+  text-align: right;
+  padding: 15px;
+  font-size: 14px;
+  float: left;
+}
+
+#tailDown {
+
+    border-top: #f3f3f3 1px solid;
+    padding: 20px;
+    text-align: center;
+    color: #666666;
+}
+
+/*问卷设计右侧按钮部分*/
+
+#right{
+  margin: 10px;
+  width: 180px;
+  height: 200px;
+  float: left;
+  /*background-color: #fff;*/
+}
+
+.lightButton{
+    width: 160px;
+    hight: 40px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.darkButton {
+    width: 160px;
+    hight: 40px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.lightButton a{
+    text-decoration: none;
+    /*背景*/
+    background: #fff;
+    padding: 8px 50px 8px 50px;
+    border-radius: 5px;
+    /*字体*/
+    font-size: 16px;
+    font-weight: bold;
+    color: #1ABC9C;
+    /*边框*/
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1ABC9C;
+    /*浏览器适配*/
+    -webkit-transition: all linear 0.30s;
+    -moz-transition: all linear 0.30s;
+    transition: all linear 0.30s;
+}
+
+.darkButton a{
+    text-decoration: none;
+    /*背景*/
+    background: #1ABC9C;
+    padding: 8px 50px 8px 50px;
+    border-radius: 5px;
+    /*字体*/
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    /*边框*/
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1ABC9C;
+    /*浏览器适配*/
+    -webkit-transition: all linear 0.30s;
+    -moz-transition: all linear 0.30s;
+    transition: all linear 0.30s;
+}
+
+.lightButton a:hover {
+    background: #1ABC9C;
+    color:#fff;
+}
+
+.darkButton a:hover {
+    background: #17a085;
+    border-color: #17a085;
 }

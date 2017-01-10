@@ -128,7 +128,10 @@ body {
 
 
 /*问卷设计主要部分*/
+
+
 /*主要部分的头部分*/
+
 #middle {
     width: 800px;
     height: auto;
@@ -151,13 +154,14 @@ body {
 
 #headTable td {
     color: #666666;
-    padding:16px;
+    padding: 16px;
 }
 
-.Blank{
-  width: 35px;
-  border-right: 1px solid #f3f3f3;
+.Blank {
+    width: 35px;
+    border-right: 1px solid #f3f3f3;
 }
+
 
 /*主要部分的尾部分*/
 
@@ -174,32 +178,32 @@ body {
     border-bottom: #f3f3f3 1px solid;
 }
 
-.tailPage{
-  width: 680px;
-  text-align: right;
-  /*padding: 15px;*/
-  font-size: 14px;
+.tailPage {
+    width: 680px;
+    text-align: right;
+    /*padding: 15px;*/
+    font-size: 14px;
 }
 
 #tailDown {
-
     border-top: #f3f3f3 1px solid;
     padding: 20px;
     text-align: center;
     color: #666666;
 }
 
+
 /*问卷设计右侧按钮部分*/
 
-#right{
-  margin: 10px;
-  width: 180px;
-  height: 200px;
-  float: left;
-  /*background-color: #fff;*/
+#right {
+    margin: 10px;
+    width: 180px;
+    height: 200px;
+    float: left;
+    /*background-color: #fff;*/
 }
 
-.lightButton{
+.lightButton {
     width: 160px;
     hight: 40px;
     padding-top: 10px;
@@ -213,7 +217,7 @@ body {
     padding-bottom: 15px;
 }
 
-.lightButton a{
+.lightButton a {
     text-decoration: none;
     /*背景*/
     background: #fff;
@@ -233,7 +237,7 @@ body {
     transition: all linear 0.30s;
 }
 
-.darkButton a{
+.darkButton a {
     text-decoration: none;
     /*背景*/
     background: #1ABC9C;
@@ -255,7 +259,7 @@ body {
 
 .lightButton a:hover {
     background: #1ABC9C;
-    color:#fff;
+    color: #fff;
 }
 
 .darkButton a:hover {

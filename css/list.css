@@ -33,9 +33,11 @@ table {
 
 
 /* start editing from here */
+
 body {
     background-color: #f3f3f3;
 }
+
 
 /*头部分*/
 
@@ -101,7 +103,7 @@ body {
     cursor: pointer;
 }
 
-#newButton{
+#newButton {
     border: 1px solid #1ABC9C;
     border-radius: 3px;
     background-color: #1ABC9C;
@@ -116,28 +118,49 @@ body {
     cursor: pointer;
 }
 
-#newButton:hover{
+#newButton:hover {
     background-color: #17a085;
     border-color: #17a085;
 }
 
-
-
-/*.dropBox{
-    display: inline-block;
-    font-size: 13px;
-    color: #666666;
-    padding-left: 20px;
+#searchBar {
+    float: right;
+    background-color: #fff;
+}
+/*搜索框部分*/
+.tab_search {
+    border-bottom: #cccccc 1px solid;
+    border-left: #cccccc 1px solid;
     height: 35px;
     line-height: 35px;
-    width: 90px;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    background-color: #fff;
+    border-top: #cccccc 1px solid;
+    border-right: #cccccc 1px solid;
+}
+
+.searchinput {
+    padding-left: 3px;
+    padding-top: 8px;
+    width: 200px;
+    font-family: arial;
     float: left;
-}*/
+    border: 0px;
+    color: #666666;
+    margin-left: 4px;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.searchaction {
+    width: 20px;
+    float: left;
+    height: 20px;
+    padding-right: 3px;
+}
+
 
 /*主要列表部分*/
+
 #middle {
     padding-top: 20px;
     padding-left: 50px;

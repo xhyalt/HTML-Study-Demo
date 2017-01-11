@@ -256,45 +256,12 @@ body {
     -ms-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
-    background: #77a033;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #77a033 0%, #668f24 33%, #5b8220 72%, #52761c 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #77a033), color-stop(33%, #668f24), color-stop(72%, #5b8220), color-stop(100%, #52761c));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #77a033 0%, #668f24 33%, #5b8220 72%, #52761c 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #77a033 0%, #668f24 33%, #5b8220 72%, #52761c 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #77a033 0%, #668f24 33%, #5b8220 72%, #52761c 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #77a033 0%, #668f24 33%, #5b8220 72%, #52761c 100%);
-    /* W3C */
-    -webkit-box-shadow: 0 0 7px #030303;
-    -moz-box-shadow: 0 0 7px #030303;
+    background: #1ABC9C;
     box-shadow: 0 -1px 4px #000;
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#77a033', endColorstr='#52761c', GradientType=0);
-    /* IE6-9 */
-    -o-box-shadow: 0 0 7px #030303;
 }
 
 .form li.style:hover {
-    background: #52761c;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #52761c 0%, #5b8220 28%, #668f24 67%, #77a033 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52761c), color-stop(28%, #5b8220), color-stop(67%, #668f24), color-stop(100%, #77a033));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #52761c 0%, #5b8220 28%, #668f24 67%, #77a033 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #52761c 0%, #5b8220 28%, #668f24 67%, #77a033 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #52761c 0%, #5b8220 28%, #668f24 67%, #77a033 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #52761c 0%, #5b8220 28%, #668f24 67%, #77a033 100%);
-    /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#52761c', endColorstr='#77a033', GradientType=0);
-    /* IE6-9 */
+    background: #18af91;
 }
 
 .form li.style input {

@@ -42,12 +42,17 @@ body {
 /*头部分*/
 
 #head {
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     height: 35px;
     line-height: 35px;
+    min-width: 950px;
+    /*position: fixed;*/
 }
+
+
+/*下拉框*/
 
 #dropBox {
     float: left;
@@ -59,6 +64,7 @@ body {
     position: relative;
     background: #fff;
     margin-right: 10px;
+    z-index: 9999;
 }
 
 #dropBox .dropBox_wrp {
@@ -103,7 +109,8 @@ body {
     cursor: pointer;
 }
 
-#newButton {
+#newButton a {
+    text-decoration: none;
     border: 1px solid #1ABC9C;
     border-radius: 3px;
     background-color: #1ABC9C;
@@ -118,7 +125,7 @@ body {
     cursor: pointer;
 }
 
-#newButton:hover {
+#newButton a:hover {
     background-color: #17a085;
     border-color: #17a085;
 }
@@ -127,7 +134,10 @@ body {
     float: right;
     background-color: #fff;
 }
+
+
 /*搜索框部分*/
+
 .tab_search {
     border-bottom: #cccccc 1px solid;
     border-left: #cccccc 1px solid;
@@ -162,17 +172,32 @@ body {
 /*主要列表部分*/
 
 #middle {
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#tree {
+    position: absolute;
+    /*float: left;*/
+    width: 300px;
+    height: 80%;
+    background-color: #fff;
+    min-height: 400px;
+    overflow: auto;
+    /*margin-right: 10px;*/
 }
 
 #list {
+    margin-left: 310px;
     background-color: #fff;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 15px;
     border-radius: 5px;
+    min-width: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #headTable {

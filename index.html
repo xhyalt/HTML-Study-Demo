@@ -20,7 +20,7 @@
 		}
 	</script>
 	<script src="js/jquery.min.js"></script>
-	<script>
+	<!-- <script>
 		$(document).ready(function(c) {
 			$('.alert-close').on('click', function(c) {
 				$('.message').fadeOut('slow', function(c) {
@@ -28,7 +28,7 @@
 				});
 			});
 		});
-	</script>
+	</script> -->
 </head>
 
 <body>
@@ -36,41 +36,63 @@
 	<script>
 		var Menu = require('electron').remote.Menu;
 
-		function loadUrl() {}
 		var template = [{
 				label: '文件',
 				submenu: [{
-					label: '退出',
-					click: function() {
-						electron.app.quit();
+						label: "注销",
+						enabled: false,
+						click: function() {
+							window.location.href = "./index.html";
+						}
+					},
+					{
+						label: '退出',
+						enabled: true,
+						accelerator: "CmdOrCtrl+E",
+						role: "close"
 					}
-				}]
+				]
 			},
 			{
 				label: '编辑',
 				submenu: [{
 						label: '撤销',
+						enabled: true,
+						accelerator: 'CmdOrCtrl+Z',
+						role: 'undo'
 					},
 					{
 						label: '重复',
+						enabled: true,
+						accelerator: 'Shift+CmdOrCtrl+Z',
+						role: 'redo'
 					},
 					{
 						type: 'separator'
 					},
 					{
 						label: '剪切',
+						enabled: true,
+						accelerator: "CmdOrCtrl+X",
+						role: "cut"
 					},
 					{
 						label: '复制',
+						enabled: true,
+						role: "copy",
+						accelerator: "CmdOrCtrl+C"
 					},
 					{
 						label: '粘贴',
-					},
-					{
-						label: '删除',
+						enabled: true,
+						role: "paste",
+						accelerator: "CmdOrCtrl+V"
 					},
 					{
 						label: '全选',
+						enabled: true,
+						role: "selectall",
+						accelerator: "CmdOrCtrl+A"
 					}
 				]
 			},
@@ -78,24 +100,44 @@
 				label: '查看',
 				submenu: [{
 						label: '重新加载',
+						enabled: true,
+						accelerator: 'CmdOrCtrl+R',
+						// click: function(item, focusedWindow) {
+						// 	if (focusedWindow)
+						// 		focusedWindow.reload();
+						// }
 					},
 					{
 						type: 'separator'
 					},
 					{
 						label: '默认大小',
+						enabled: true
 					},
 					{
-						label: '放大'
+						label: '放大',
+						enabled: true
 					},
 					{
-						label: '缩小'
+						label: '缩小',
+						enabled: true
 					},
 					{
 						type: 'separator'
 					},
 					{
 						label: '切换全屏',
+						enabled: true,
+						accelerator: (function() {
+							if (process.platform == 'darwin')
+								return 'Ctrl+Command+F';
+							else
+								return 'F11';
+						})(),
+						click: function(item, focusedWindow) {
+							if (focusedWindow)
+								focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
+						}
 					}
 				]
 			},
@@ -103,28 +145,48 @@
 				label: '窗口',
 				submenu: [{
 						label: '最小化',
+						enabled: true,
+						accelerator: 'CmdOrCtrl+M',
+						role: 'minimize'
 					},
 					{
 						label: '关闭',
-						click: function() {
-							electron.app.quit();
-						}
+						enabled: true,
+						accelerator: "CmdOrCtrl+E",
+						role: "close"
 					}
 				]
 			},
 			{
 				label: '帮助',
+				role: "help",
 				submenu: [{
 						label: '了解更多',
+						enabled: true,
+						click: function() {
+							window.location.href = "./404.html";
+						}
 					},
 					{
 						label: '文档',
+						enabled: true,
+						click: function() {
+							window.location.href = "./404.html";
+						}
 					},
 					{
-						label: '社区讨论'
+						label: '社区讨论',
+						enabled: true,
+						click: function() {
+							window.location.href = "./404.html";
+						}
 					},
 					{
-						label: '搜索问题'
+						label: '搜索问题',
+						enabled: true,
+						click: function() {
+							window.location.href = "./404.html";
+						}
 					}
 				]
 			}
@@ -139,19 +201,19 @@
 				<h1>登&nbsp;&nbsp;&nbsp;&nbsp; 录</h1>
 			</div>
 			<!--- 表单 --->
-			<form class="form" action="list.html" method="post" name="contact_form">
+			<form name="login" class="form" action="list.html" onsubmit="return validateForm()" method="post" name="contact_form">
 				<ul>
 					<li>
 						<label><img src="images/link.png" alt=""/></label>
-						<input type="text" class="url" placeholder="ip:port" required />
+						<input name="url" type="text" class="url" placeholder="ip:port" required />
 					</li>
 					<li>
 						<label><img src="images/contact.png" alt=""/></label>
-						<input type="text" class="text" placeholder="账号" required />
+						<input name="admin" type="text" class="text" placeholder="账号" required />
 					</li>
 					<li>
 						<label><img src="images/lock.png" alt=""/></label>
-						<input type="Password" name="Password" placeholder="密码" required />
+						<input name="password" type="Password" name="Password" placeholder="密码" required />
 					</li>
 					<li class="style">
 						<input type="Submit" value="登     录">

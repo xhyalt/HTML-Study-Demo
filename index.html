@@ -20,10 +20,11 @@
 		}
 	</script>
 	<script src="js/jquery.min.js"></script>
+	<!-- form表单验证 -->
 	<script type="text/javascript">
 		function validateForm() {
 			var urlValue = document.forms["login"]["url"].value;
-			var patt = /^(localhost|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})):\d{1,5}$/g;
+			var patt = /^(localhost|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})):\d{4,5}$/g;
 			var adminValue = document.forms["login"]["admin"].value;
 			var passwordValue = document.forms["login"]["password"].value;
 			if (urlValue == null || urlValue == "") {
@@ -213,7 +214,8 @@
 	<div class="message warning">
 		<div class="contact-form">
 			<div class="logo">
-				<h1>登&nbsp;&nbsp;&nbsp;&nbsp; 录</h1>
+				<!-- <h1>登&nbsp;&nbsp;&nbsp;&nbsp; 录</h1> -->
+				<h1>问 卷 设 计 器</h1>
 			</div>
 			<!--- 表单 --->
 			<form name="login" class="form" action="list.html" onsubmit="return validateForm()" method="post" name="contact_form" novalidate>

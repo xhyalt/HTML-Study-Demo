@@ -54,7 +54,7 @@ body {
 }
 
 #left {
-    width: 150px;
+    width: 140px;
     /*border: 1px solid #ccc;*/
     font-size: 14px;
     margin: 10px;
@@ -63,7 +63,7 @@ body {
 
 .menuBox {
     left: 50px;
-    width: 150px;
+    width: 140px;
     padding-top: 0px;
     background-color: #fff;
 }
@@ -77,7 +77,7 @@ body {
 }
 
 .menuTitleBox p {
-    text-indent: 40px;
+    text-indent: 30px;
     font-size: 16px;
     color: #777777;
 }
@@ -86,7 +86,7 @@ body {
     position: absolute;
     height: 15px;
     width: 15px;
-    left: 110px;
+    left: 100px;
     top: 12px;
     background-image: url(../images/list_01_plus_on.png);
     background-repeat: no-repeat;
@@ -94,7 +94,6 @@ body {
 
 .menuItemBox {
     display: none;
-    font-size: 13px;
 }
 
 .menuItemBox ul {
@@ -109,21 +108,38 @@ body {
     list-style: none;
     border-bottom: #f3f3f3 1px solid;
     text-align: left;
+    background-color: #fff;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transition: transform 0.2s;
 }
 
-.menuItemBox p {
-    text-indent: 60px;
-    font-size: 14px;
-    color: #777777;
+.menuItemBox li:hover {
+    border-left: 4px solid #1ABC9C;
+    border-right: 4px solid #1ABC9C;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 1px -2px 2px #cccccc;
 }
 
 .imgSubjectBox {
     position: absolute;
     height: 20px;
     width: 20px;
-    left: 35px;
+    left: 25px;
     top: 5px;
     background-repeat: no-repeat;
+}
+
+.menuItemBox p {
+    text-indent: 50px;
+    font-size: 14px;
+    color: #777777;
+}
+
+.menuItemBox a {
+    text-decoration: none;
 }
 
 
